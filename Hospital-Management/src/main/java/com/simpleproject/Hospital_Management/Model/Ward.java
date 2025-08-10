@@ -46,4 +46,15 @@ public class Ward {
     public void setWard_Type(String ward_Type) {
         Ward_Type = ward_Type;
     }
+
+    @Override
+    public String toString() {
+        return "Ward{" +
+                "ID=" + ID +
+                ", Ward_Name='" + Ward_Name + '\'' +
+                ", Capacity='" + Capacity + '\'' +
+                ", Current_Occupancy='" + Current_Occupancy + '\'' +
+                ", Ward_Type='" + Ward_Type + '\'' +
+                '}';
+    }
 }

@@ -75,4 +75,18 @@ public class Doctor {
     public void setGender(String gender) {
         Gender = gender;
     }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "ID=" + ID +
+                ", First_Name='" + First_Name + '\'' +
+                ", Last_Name='" + Last_Name + '\'' +
+                ", Specialization='" + Specialization + '\'' +
+                ", phone_Number='" + phone_Number + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Date_OF_Birth='" + Date_OF_Birth + '\'' +
+                ", Gender='" + Gender + '\'' +
+                '}';
+    }
 }

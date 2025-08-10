@@ -83,4 +83,19 @@ public class Patient {
     public void setWard_ID(int ward_ID) {
         Ward_ID = ward_ID;
     }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "ID=" + ID +
+                ", First_Name='" + First_Name + '\'' +
+                ", Last_Name='" + Last_Name + '\'' +
+                ", Address='" + Address + '\'' +
+                ", Date_OF_Birth='" + Date_OF_Birth + '\'' +
+                ", Contact_Number='" + Contact_Number + '\'' +
+                ", Admission_Date='" + Admission_Date + '\'' +
+                ", Doctor_ID=" + Doctor_ID +
+                ", Ward_ID=" + Ward_ID +
+                '}';
+    }
 }
