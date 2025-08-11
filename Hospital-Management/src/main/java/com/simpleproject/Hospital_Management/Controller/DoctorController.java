@@ -1,10 +1,7 @@
 package com.simpleproject.Hospital_Management.Controller;
 
 import com.simpleproject.Hospital_Management.Model.Doctor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,4 +18,16 @@ public class DoctorController {
         System.out.println("Doctor Saved : " + DoctorMapDB);
         return "Doctor Saved Successfully";
     }
+
+    @GetMapping("/findAll")
+    public Map<Integer, Doctor> getAllDoctors(){
+        return DoctorMapDB;
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteDoctorById(@PathVariable int id){
+        DoctorMapDB.remove(id);
+        return "Doctor removed successfully!";
+    }
+
 }
